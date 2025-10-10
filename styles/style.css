@@ -4,37 +4,99 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer (init);
 
-@layer design {
+@layer init {
     :root {
         color-scheme: light dark;
-        --header-bg-color: light-dark (#3B3E40,#3B3E40 );
-        --header-text-color: light-dark (#fff, #fff);
-        --primary-color: light-dark (#66D4D4, #2b5a5a);
-        --secondary-color: light-dark (#fff, #fff);
-        --text-color: light-dark (#000, #fff);
-        --bg-color: light-dark (#fff, #000);
-    }  
+        --header-bg-color: light-dark(#3b3e40, #3b3e40);
+        --header-text-color: light-dark(#ffffff, #ffffff);
+        --primary-color: light-dark(#0fd5e7, #3c7034);
+        --secondary-color: light-dark(#000000,#ffffff);
+        --text-color: light-dark(#ffffff, #000000);
+        --font-primary: 'Open Sans', sans-serif;
+        --font-secondary: 'Comfortaa', cursive;
+        --bg-color: light-dark(#ffffff, #000000);
+        --text-color2: light-dark(#000000, #ffffff);
+    }
+ 
     html {
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 100%;
+        line-height: 1.5;
         color: var(--text-color);
-    }  
+    }
+ 
+    
+}
+ 
+@layer design {
+    h1 {
+        font-size: 4rem;
+        font-weight: bolder;
+    }
     body {
         background-color: var(--bg-color);
     }
+    main {
+        padding: 1rem;
+        margin: auto;
+        max-width: 960px;
+        color: var(--text-color2);
+    }
+    .img-fluid  {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     .header {
-        background-image: url('../images/header-2560w.webp');
+        background-image: url(../images/header-2560w.jpg);
         background-size: cover;
         background-position: top left;
-        background-color: var (--header-bg-color);
+        background-color: var(--header-bg-color);
         color: var(--header-text-color);
         line-height: 1.5;
+        padding: 1em;
+ 
     }
+ 
     .header__nav {
         text-align: center;
-    }   
+    }
+ 
     .header__link {
+ 
+        margin-top: 1em;
         display: inline-block;
-        padding: 1em;
+    }
+    .button {
+        padding: 0.75em 2em;
+        display: inline-block;
+        border-radius: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .button--light {
+        color: var(--text-color);
+        background-color: var(--secondary-color);
+    }
+    .img-block {
+        margin: 0;
+    }
+    .img-block__caption {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+    .info-box {
+        margin: 0;
+        padding: 1.5em;
+    }
+    .info-box__title {
+        margin-bottom: 1em;
+    }
+    .heading {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+    }
+    .heading--h3 {
+        font-size: 1.25rem  ;
     }
 }
