@@ -100,19 +100,32 @@
         font-family: var(--font-primary);
         font-weight: 700;
     }
+    .heading--h1 {
+        font-size: calc(1em +3vw);
+    }
     .heading--h3 {
         font-size: 1.25rem  ;
     }
     .bigger__h2 {
         font-size: 36px;
     }
+    .bigger2x {
+
+    }
     .card {
         vertical-align: top;
         display: inline-block;
         margin: 0 3.75rem 0 0;
         width: 17.5em;
+        padding: 1em;
     }
     .list__item::marker {
         color: var(--primary-color);
+    }
+    .info-box__massive {
+        background-color: var(--header-text-color);
+        color: var(--header-bg-color);
+        border: none;
+        text-align: center;
     }
 }
