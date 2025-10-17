@@ -9,7 +9,7 @@
         color-scheme: light dark;
         --header-bg-color: light-dark(#3b3e40, #3b3e40);
         --header-text-color: light-dark(#ffffff, #ffffff);
-        --primary-color: light-dark(#0fd5e7, #3c7034);
+        --primary-color: light-dark(#0fd5e7, #0fd5e7);
         --secondary-color: light-dark(#000000,#ffffff);
         --text-color: light-dark(#ffffff, #000000);
         --font-primary: 'Open Sans', sans-serif;
@@ -78,6 +78,10 @@
         color: var(--text-color);
         background-color: var(--secondary-color);
     }
+    .button--primary {
+        color: var(--header-text-color);
+        background-color: var(--primary-color);
+    }
     .img-block {
         margin: 0;
     }
@@ -93,10 +97,22 @@
         margin-bottom: 1em;
     }
     .heading {
-        font-family: "Open Sans", sans-serif;
+        font-family: var(--font-primary);
         font-weight: 700;
     }
     .heading--h3 {
         font-size: 1.25rem  ;
+    }
+    .bigger__h2 {
+        font-size: 36px;
+    }
+    .card {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0 3.75rem 0 0;
+        width: 17.5em;
+    }
+    .list__item::marker {
+        color: var(--primary-color);
     }
 }
