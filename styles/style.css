@@ -1,9 +1,9 @@
-@layer reset, init, design;
-
+@layer reset, init, design, media;
+ 
 @import url(./normalize.css) layer(reset);
-
+ 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer (init);
-
+ 
 @layer init {
     :root {
         color-scheme: light dark;
@@ -17,40 +17,40 @@
         --bg-color: light-dark(white, black);
         --text-color2: light-dark(black, white);
     }
-
+ 
     html {
         font-family: "Open Sans", sans-serif;
         font-size: 100%;
         line-height: 1.5;
         color: var(--text-color);
     }
-
-
+ 
+ 
 }
-
+ 
 @layer design {
     h1 {
         font-size: 4rem;
         font-weight: bolder;
     }
-
+ 
     body {
         background-color: var(--bg-color);
     }
-
+ 
     main {
         padding: 1rem;
         margin: auto;
         max-width: 960px;
         color: var(--text-color2);
     }
-
+ 
     .img-fluid {
         display: block;
         width: 100%;
         height: auto;
     }
-
+ 
     .header {
         background-image: url(../images/header-2560w.jpg);
         background-size: cover;
@@ -60,27 +60,27 @@
         line-height: 1.5;
         padding: 5em;
     }
-
+ 
     .header__nav {
         text-align: center;
     }
-
+ 
     .header__link {
         margin-top: 1em;
         display: inline-block;
     }
-
+ 
     .header__link img {
         width: 5.375em;
         height: 3.1em;
     }
-
+ 
     .header__intro p {
         text-align: left;
         max-width: 45em;
         margin-bottom: 2em;
     }
-
+ 
     .button {
         padding: 0.75em 2em;
         display: inline-block;
@@ -88,40 +88,42 @@
         text-decoration: none;
         font-weight: bold;
     }
-
+ 
     .button--light {
         color: black;
         background-color: white;
     }
-
+ 
     .button--primary {
         color: var(--header-text-color);
         background-color: var(--primary-color);
     }
-
+ 
     .img-box {
         margin: 0;
     }
-
+ 
     .img-box__2 {
         margin: 1em;
         display: inline-block;
     }
-
+ 
     .img-box__caption {
         text-align: center;
         margin-top: 0.5rem;
     }
-
+ 
     .info-box {
         margin: 0;
         padding: 1.5em;
     }
-
+ 
     .info-box__title {
         margin-bottom: 1em;
+        border: #66d4d4 solid 3px;
+        padding: 1em;
     }
-
+ 
     .info-box__massive {
         background-color: var(--header-bg-color);
         color: var(--header-text-color);
@@ -133,37 +135,37 @@
         padding: 1.5em;
         box-sizing: border-box;
     }
-
+ 
     .info-box__massive .heading--h2 {
         margin: 0 0 0.1em;
         line-height: 1.1;
     }
-
+ 
     .info-box__massive > p:not(.heading) {
-        margin-top: 0; 
+        margin-top: 0;
     }
-
+ 
     .heading {
         font-family: var(--font-primary);
         font-weight: 700;
     }
-
+ 
     .heading--h1 {
         font-size: calc(1em +3vw);
     }
-
+ 
     .heading--h2 {
         font-size: 2.25em;
     }
-
+ 
     .heading--h3 {
         font-size: 1.25em;
     }
-
+ 
     .heading--h2__2x {
         font-size: 4em;
     }
-
+ 
     .card {
         vertical-align: top;
         display: inline-block;
@@ -171,7 +173,7 @@
         width: 17.5em;
         padding: 1em;
     }
-
+ 
     .card__2 {
         vertical-align: top;
         display: inline-block;
@@ -179,7 +181,7 @@
         width: 29.5em;
         padding: 0.15em 0;
     }
-
+ 
     .card__3 {
         vertical-align: top;
         display: inline-block;
@@ -187,17 +189,17 @@
         width: 29.5em;
         padding: 0.15em 0;
     }
-
+ 
     .img-box__2 {
         margin: 0 auto 1em auto;
         display: inline-block;
         width: 100%;
     }
-
+ 
     .list__item::marker {
         color: var(--primary-color);
     }
-
+ 
     .foot {
         text-align: center;
         background-color: var(--header-bg-color);
@@ -205,30 +207,38 @@
         padding: 1em;
         position: relative;
     }
-
+ 
     .foot a {
         color: var(--header-text-color);
         text-decoration: none;
     }
-
+ 
     .foot a:hover {
         text-decoration: underline;
         color: lightblue;
     }
-
+ 
     @media (max-width: 768px) {
-
+        .header {
+            padding: 1.5em;
+        }
+        .card {
+            display: block;
+            margin: 1em;
+            width: auto;
+            padding: 1em;
+        }
         .card__2,
         .card__3 {
             display: block;
             width: 100%;
-            margin: 0.5em auto;
+            margin: 1em auto;
         }
-
+ 
         .img-box__2 {
-            margin: 0.5em auto;
+            margin: auto;
         }
-
+ 
         .info-box__massive {
             width: 100vw;
             position: relative;
